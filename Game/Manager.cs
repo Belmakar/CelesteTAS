@@ -17,6 +17,7 @@ namespace TAS {
 	public class Manager {
 		public static bool Running, Recording;
 		private static InputController controller = new InputController("Celeste.tas");
+		private static int gamepadIndex;
 		public static State state, nextState;
 		public static string CurrentStatus, PlayerStatus;
 		public static int FrameStepCooldown, FrameLoops = 1;
@@ -236,8 +237,12 @@ namespace TAS {
 			Recording = false;
 			state = State.None;
 			nextState = State.None;
+			Input.Gamepad = gamepadIndex;
 		}
 		private static void EnableRun() {
+			if(!Running) {
+				gamepadIndex = Input.Gamepad;
+			}
 			nextState &= ~State.Enable;
 			UpdateVariables(false);
 		}
@@ -293,10 +298,13 @@ namespace TAS {
 				if (MInput.GamePads[i].Attached) {
 					found = true;
 					MInput.GamePads[i].CurrentState = state;
+					Input.Gamepad = i;
+					break;
 				}
 			}
 
 			if (!found) {
+				Input.Gamepad = 0;
 				MInput.GamePads[0].CurrentState = state;
 				MInput.GamePads[0].Attached = true;
 			}
