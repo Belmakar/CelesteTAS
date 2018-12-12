@@ -73,25 +73,25 @@ Read,4A - Golden Ridge.tas,8,156
    7,L,J
    1,L
   22,L,J
-  15,L,U,X
+   1,D,X
+  14,L,U,X
   14,R
-   6,R,D,X
-   1,L,J
-   7,L
-  24,L,J
-  11,L,U,X
+  14,L,D,X
+  17,L,J
+   1,D,X
+  23,L,U,X
+   1,R,J
   25,L,J
   10,L
-   5,R,D,X
-   1,L,J
-   7,L
-  16,L,J
+  13,L,D,X
+   8,L,J
+  19,L
+   1,J
+  26,L,J
+  28,L
    1,K
-  26,L,K
-  18,L,D
-   8,R,J
-  35,L,K
-  35,L
+  47,L,K
+   2,G
   25,L,X
  257
    1,J

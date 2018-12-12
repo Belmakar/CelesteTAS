@@ -40,9 +40,10 @@ Read,3A - Celestial Resort.tas,1044,1295
    9
   15,U,X
   20
-  10,L,D,X
-  13,L,J
-  10,L
+   1,D,X
+  12,L,D,X
+  11,L,J
+   9,L
   15,L,X
   36,L,D
    8,L,J
